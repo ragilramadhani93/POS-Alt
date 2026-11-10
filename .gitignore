@@ -1,0 +1,23 @@
+node_modules/
+.env
+*.env.local
+dist/
+.next/
+build/
+*.log
+
+# Flutter
+pos-app/.dart_tool/
+pos-app/.flutter-plugins
+pos-app/.flutter-plugins-dependencies
+pos-app/build/
+
+# Uploads
+uploads/
+*.xlsx
+*.csv
+
+# IDE
+.vscode/
+.idea/
+*.swp
