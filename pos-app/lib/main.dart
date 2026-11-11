@@ -48,7 +48,7 @@ class _MainPosScreenState extends State<MainPosScreen> {
   String _grDate = '';
 
   // State Form Waste
-  String _selectedWasteProduct = 'Biji Kopi Espresso Blend';
+  String _selectedWasteProduct = 'Biji Kopi Espresso Blend (Raw Material)';
   final TextEditingController _wasteQtyController = TextEditingController(text: '100');
   final TextEditingController _wasteReasonController = TextEditingController(text: 'Tumpah saat kalibrasi grinder');
 
@@ -408,7 +408,9 @@ class _MainPosScreenState extends State<MainPosScreen> {
             children: [
               Container(
                 padding: const EdgeInsets.all(12),
-                border: const Border(bottom: BorderSide(color: Color(0xFFE2DDD8))),
+                decoration: const BoxDecoration(
+                  border: Border(bottom: BorderSide(color: Color(0xFFE2DDD8))),
+                ),
                 child: Column(
                   children: [
                     Row(
@@ -603,7 +605,7 @@ class _MainPosScreenState extends State<MainPosScreen> {
       padding: const EdgeInsets.all(20),
       child: Center(
         child: Container(
-          maxWidth: 600,
+          constraints: const BoxConstraints(maxWidth: 600),
           padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
             color: Colors.white,
@@ -690,7 +692,7 @@ class _MainPosScreenState extends State<MainPosScreen> {
       padding: const EdgeInsets.all(20),
       child: Center(
         child: Container(
-          maxWidth: 600,
+          constraints: const BoxConstraints(maxWidth: 600),
           padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
             color: Colors.white,
@@ -793,7 +795,7 @@ class _MainPosScreenState extends State<MainPosScreen> {
           if (_grItems.isNotEmpty) ...[
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-              decoration: BoxDecoration(color: Colors.emerald.withOpacity(0.1), borderRadius: BorderRadius.circular(6), border: Border.all(color: Colors.green)),
+              decoration: BoxDecoration(color: Colors.green.withOpacity(0.1), borderRadius: BorderRadius.circular(6), border: Border.all(color: Colors.green)),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
